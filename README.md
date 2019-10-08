@@ -66,3 +66,50 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### yarn install husty lint-staged pretter
+
+* husty和lint-staged：这两包会把npm脚本挂在gitbook，这样当程序员commit代码的时候，Prettier就会运行
+* prettier 格式化代码
+
+```
+// ./package.json
+"husty": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+},
+"lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md":[
+        "prettier --single-quote --write",
+        "git add"
+    ]
+},
+"prettier": [
+    "singleQuote": true
+}
+```
+
+### yarn add react-bootstrap bootstrap
+```
+<!-- ./public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... title and other elements ... -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+  </head>
+  <!-- ... body ... -->
+</html>
+```
+
+### PropType
+yarn add prop-type
+
+### Redux
+yarn add redux react-redux
